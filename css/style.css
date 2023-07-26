@@ -1,0 +1,346 @@
+.navbar {
+    margin-top: 20px;
+}
+* a{
+  text-decoration: none;
+}
+
+
+.container {
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+    .pop-up-text1 {
+      visibility: hidden;
+      animation: pop-up-left 2s ease-out;
+    }
+    .pop-up-text2 {
+      visibility: hidden;
+      animation: pop-up-scale 2s ease-out;
+    }
+    @keyframes pop-up-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes pop-up-scale {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+  
+
+
+.custom-bg {
+    background-color: rgb(227, 227, 227);
+}
+
+.fs-4 {
+    color: rgb(17, 150, 126);
+    margin-left: -40px;
+}
+
+.fs-5 {
+    color: black;
+}
+
+.nav-item:hover {
+    background-color: #f8c60f;
+    box-shadow: 0 0.125rem 0.25rem rgba(202, 202, 202, 0.681);
+    border-radius: 95px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+/* Main Page Section */
+.logo-image {
+    max-width: 320%;
+    height: auto;
+    
+}
+.logo-img-body{
+    position: relative;
+    top: 80px; 
+   right:10%;
+}
+
+/* Big Logo */
+.big-logo {
+    margin-bottom: 90px;
+}
+
+
+/* 3 Middle-sized Circles */
+
+.scholarship{
+color: rgba(150, 150, 150, 0.758);
+size: 10px;
+}
+.scholarship:hover{
+  color: rgb(17, 150, 126);
+}
+.course{
+    color: rgba(150, 150, 150, 0.758);
+    size: 10px;
+}
+.course:hover{
+  color: rgb(17, 150, 126);
+}
+.contact{
+    color: rgba(150, 150, 150, 0.758);
+    size: 10px;
+}
+.contact:hover{
+  color: rgb(17, 150, 126);
+}
+
+.circle1{
+    display: flex;
+    position: relative; 
+    flex-direction: column;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease, border-width 0.3s ease;
+    border: 5px solid rgb(17, 150, 126);
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+.circle2{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease, border-width 0.3s ease;
+    border: 5px solid #f8c60f;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.circle3 {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease, border-width 0.3s ease;
+    border: 5px solid rgb(249, 101, 15);
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+
+.circle1:hover {
+    border-color: darkred; /* Change border color on hover */
+    border-width: 5px; /* Increase border width on hover */
+}
+.circle2:hover {
+    border-color: rgba(157, 14, 14, 0.648); /* Change border color on hover */
+    border-width: 5px; /* Increase border width on hover */
+}
+.circle3:hover {
+    border-color: rgba(173, 43, 43, 0.664); /* Change border color on hover */
+    border-width: 5px; /* Increase border width on hover */
+}
+
+.text-container {
+    position: relative;
+    top: 85px; /* Adjust the value to move the text down */
+  }
+  .circle-container {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800%;
+    height: 800%;
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin: 0 auto; 
+    margin-top: -5px;/* Center the container horizontally */
+}
+
+.circle1 span,
+.circle2 span,
+.circle3 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.circle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -10%;
+    margin-top: 5%;
+    width: 70%;
+    height: auto;
+    z-index: 1; /* Ensure the image appears on top of the circle */
+  }
+
+  footer {
+    background-color:#2580A0;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .circle {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f8c60f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 150px;
+    
+  }
+ 
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80%;
+    white-space: nowrap;
+  }
+  .text3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100%;
+    white-space: nowrap;
+  }
+  .image-contact{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100%;
+    margin-top: 10%;
+  }
+  
+  .text-row {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2em;
+  }
+  .img-col {
+    width: 15x;
+    height: 15px;
+    line-height: 3.0em;
+  }
+  .image-contact img {
+    margin-right: 10px;
+}
+
+.circle-image-small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 160px;
+    margin-top: 5px;
+    width: 8%;
+    height: auto;
+    z-index: 1; /* Ensure the image appears on top of the circle */
+  }
+
+  .circle-image-smal2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 158px;
+    margin-top: 6px;
+    width: 8%;
+    height: auto;
+    z-index: 1; /* Ensure the image appears on top of the circle */
+  }
+
+  .circle-image-smal3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 158px;
+    margin-top: 4px;
+    width: 9%;
+    height: auto;
+    z-index: 1; /* Ensure the image appears on top of the circle */
+  }
+
+  .circle-container-small {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.float-btn {
+  position: fixed;
+  border-radius: 10px;
+  bottom: 20px;
+  width: 200px;
+  height: 60px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #f8c60f; /* Change button background color */
+  color: #000000; /* Change button text color */
+  text-align: center; /* Center button text */
+  padding: 10px 20px; /* Adjust button padding */
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.float-btn:hover{
+  background-color: #f8aa0f;
+  text-shadow: #a5a39cb1;
+}
+
+
+
+
+
+
+
+  
+
+
+

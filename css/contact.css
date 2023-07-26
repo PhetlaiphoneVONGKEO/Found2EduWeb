@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.pic{
+    width: 400px;
+    height: 400px;
+    border-radius: 50% 50% 50% 50%;
+    background-color: rgba(85,186,181,255);
+    display: flex;
+    justify-content: center;
+    
+}
+.label{
+    width: 400px;
+    height: 400px;
+    
+    margin-left: 55px;
+}
+.pic img{
+    position: absolute;
+    width: 460px;
+    height: 450px;
+    margin-top: -20px;
+    margin-right: -40px;
+    
+}
+.ch1{
+    font-size: 70px;
+    position: absolute;
+    top: 40px;
+    color: rgba(57,128,161,255);
+    
+}
+.labelin2 img{
+    width: 29px;
+    margin-top: 80px;
+    margin-left: 20px;
+    
+}
+.labelin2{
+    display: flex;  
+}
+.labelin2 p{
+    margin-top: 85px;
+    margin-left: 12px;
+    font-size: 18px;
+}
+.labelin3{
+    display: flex;
+}
+.labelin3 img{
+    width: 32px;
+    margin-top: 10px;
+    margin-left: 20px; 
+}
+.labelin3 p{
+    margin-top: 16px;
+    margin-left: 12px;
+    font-size: 18px;
+}
+.labelin4{
+    display: flex;
+}
+.labelin4 img{
+    width: 32px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.labelin4 p{
+    margin-top: 16px;
+    margin-left: 12px;
+    font-size: 18px;
+}
+.labelbt1{
+    margin-left: 20px;
+    margin-top: 200px;
+}
+.labelbt1 h2{
+    font-size: 30px;
+    color: rgba(158,149,142,255);
+}
+.labelbt2{
+    display: flex;
+    margin-left: 20px;
+}
+.labelbt2 h1{
+    margin-top: -10px;
+    font-size: 55px;
+}
+.one{
+    color: rgba(57,128,161,255);
+}
+.two{
+    color: rgba(240,192,0,255);
+}
+.three{
+    color: rgba(230,118,31,255);
+}
