@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    
+}
+.center{
+
+    position: absolute;
+    
+    text-align: center;
+    left: 23%;
+   
+    /* text-decoration: underline; */
+    
+}
+.title{
+    position: absolute;
+    margin-top: 0;
+    font-size: 80px;
+    width: 400px;
+    left: 0;
+    margin-left: 0;
+    padding-left: 0;
+
+}
+.title::after {
+    content: "";
+    display: block;
+    width: 900px; /* Adjust the width of the line */
+    height: 4px; /* Adjust the height and thickness of the line */
+    background-color: #FFB000; /* Adjust the line color */
+    position: absolute;
+    bottom: 10px; /* Adjust the distance of the line from the title */
+    left: 485px;
+    transform: translateX(-50%);
+  }
+  .line {
+    position: relative;
+   
+    border: 5px;
+    width: 500px;
+  }
+ .line::after {
+    content: "";
+    position: absolute;
+    bottom: -88px;
+    left: 35px;
+    width: 900px; /* Adjust the width of the line */
+    border-bottom: 3px solid #f3d59490; /* Adjust the color and thickness of the line */
+  }
+  
+.imgCover{
+    position: absolute;
+    text-align: center;
+    left: 20%;
+    top: 10%;
+    width: 1200px;
+    height: 600px;
+}
+.bline {
+    position: relative;
+    left: 20%;
+    top: 688px;
+    width: 1200px;
+    height: 10px;
+    
+}
+.subContainer{
+    position: absolute;
+    font-size: 26px;
+    width: 1100px;
+    left: 23%;
+    top: 70%;
+    line-height: 2;
+}
+.hr{
+    width: 700px;
+}
+.img_buttom1{
+    position: absolute;
+    top: 1350px;
+    left: 650px;
+}
+.img_buttom2{
+    position: absolute;
+    top: 1415px;
+    left: 950px;
+}
+.img_buttom3{
+    position: absolute;
+    top: 1470px;
+    left: 800px;
+}
+.img_buttom4{
+    position: absolute;
+    top: 1527px;
+    left: 1250px;
+}
+.bline_buttom{
+    position: absolute;
+    top: 1592px;
+    left: 20%;
+    width: 1200px;
+}
