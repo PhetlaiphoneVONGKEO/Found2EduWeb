@@ -24,7 +24,7 @@ var password = document.getElementById("password").value;
 //user
 if ( username == "user" && password == "user123"){
 // alert ("Login successfully");
-window.location = "index.html"; // Redirecting to other page.
+window.location = "index_user.html"; // Redirecting to other page.
 return false;
 }
 else{
