@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box with User-Uploaded Photo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .photo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .photo-box {
+      width: 300px;
+      height: 300px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-description {
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: vertical;
+    }
+
+    .file-input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .custom-file-upload {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .custom-file-upload:hover {
+      background-color: #0056b3;
+    }
+
+    .save-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .reset-btn:hover {
+      background-color: #eb7a70;
+    }
+    .reset-btn {
+      background-color: #f31303;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .reset-btn:hover {
+      background-color: #e7321a;
+    }
+  </style>
+</head>
+<body>
+  <div class="photo-container">
+    <div class="photo-box" id="photoBox">
+      <img id="uploadedPhoto" src="" alt="Uploaded Photo">
+    </div>
+    <div class="file-input-container">
+      <label for="fileInput" class="custom-file-upload">Choose File</label>
+      <input type="file" accept="image/*" id="fileInput" onchange="loadImage(event)" class="file-input">
+    </div>
+    <textarea class="photo-description" id="photoDescription" placeholder="Enter description..." rows="5"></textarea>
+    <button class="save-btn" onclick="saveData()">Save Data</button>
+    <button class="reset-btn" onclick="resetFields()">Reset Data</button>
+  </div>
+  
+  <script>
+    // ... JavaScript functions ...
+    
+    function loadImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function() {
+          const photoBox = document.getElementById("photoBox");
+          const uploadedPhoto = document.getElementById("uploadedPhoto");
+          uploadedPhoto.src = reader.result;
+          photoBox.style.background = "none";
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function saveData() {
+      const photoUrl = document.getElementById("uploadedPhoto").src;
+      const description = document.getElementById("photoDescription").value;
+      localStorage.setItem("photoUrl", photoUrl);
+      localStorage.setItem("description", description);
+      alert("Data saved successfully!");
+
+      // Reset fields after saving data
+      resetFields();
+    }
+    function resetFields() {
+      // Reset the uploaded photo and description
+      document.getElementById("uploadedPhoto").src = "";
+      document.getElementById("photoDescription").value = "";
+
+      // Reset the file input field
+      const fileInput = document.getElementById("fileInput");
+      fileInput.value = "";
+    }
+    function resetFields() {
+      // Show a confirmation alert before resetting the fields
+      const confirmReset = confirm("Are you sure you want to reset the data?");
+      if (confirmReset) {
+        // Reset the uploaded photo and description
+        document.getElementById("uploadedPhoto").src = "";
+        document.getElementById("photoDescription").value = "";
+
+        // Reset the file input field
+        const fileInput = document.getElementById("fileInput");
+        fileInput.value = "";
+
+        // Show an alert after resetting the fields
+        alert("Data has been reset!");
+      }}
+
+    function loadData() {
+      const photoUrl = localStorage.getItem("photoUrl");
+      const description = localStorage.getItem("description");
+      if (photoUrl) {
+        const photoBox = document.getElementById("photoBox");
+        const uploadedPhoto = document.getElementById("uploadedPhoto");
+        uploadedPhoto.src = photoUrl;
+        photoBox.style.background = "none";
+      }
+      if (description) {
+        document.getElementById("photoDescription").value = description;
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
